@@ -1,10 +1,5 @@
 from socket import *
 
-"""
-socket library
-- 
-"""
-
 serverName = 'servername'
 serverPort = 12000
 clientSocket = socket(AF_INET, SOCK_STREAM)
