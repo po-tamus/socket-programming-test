@@ -7,7 +7,7 @@ PORT = 12000
 
 def create_socket(): 
     try: 
-        clientSocket = socket(socket.AF_INET, socket.SOCK_DGRAM)
+        clientSocket = socket(AF_INET, SOCK_DGRAM)
         return clientSocket
     except: 
         # print(f"{p}")
@@ -35,5 +35,4 @@ def run():
     socket.close()
 
 
-if __name__ == "__main__": 
-    run()
+run()

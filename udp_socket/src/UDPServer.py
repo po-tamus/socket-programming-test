@@ -6,7 +6,7 @@ PORT = 12000
 
 def create_socket(): 
     try: 
-        clientSocket = socket(socket.AF_INET, socket.SOCK_DGRAM)
+        clientSocket = socket(AF_INET, SOCK_DGRAM)
         return clientSocket
     except: 
         # print(f"{p}")
@@ -18,12 +18,12 @@ def run():
     if socket is not None:
 
         # 
-        socket.bind('', PORT)
+        socket.bind(('', PORT))
+        print('The server is ready to receive')
 
         while True: 
             message, clientAddress = socket.recvfrom(2048)
             modifiedMessage = message.decode().upper()
             socket.sendto(modifiedMessage.encode(), clientAddress)
 
-if __name__ == "__main__": 
-    run()
+run()
